@@ -10,6 +10,13 @@
 #include <algorithm>
 #include <unistd.h>
 
+/***
+    AUTHOR: Marlon da Silva Rogério
+    DATA: 01 JUN 2021
+    DISCIPLINA: Tópicos Especiais em Inteligência Computacional 
+    DESCRICAO: Otimização multiobjetivo | MOEA/D | Mimização
+***/
+
 using namespace std;
 
 const int T = 10;                                 //tamanho da vizinhanca
@@ -83,23 +90,23 @@ int main(const int argc, const char *argv[])
         }
     }
 
-    // for (int i = 0; i < tam_pop; i++)
-    // {
-    //     for (int j = 0; j < dimensoes_obj; j++)
-    //         printf("%.3f ", populacao[i].fx[j]);
-    //     printf(" -- ");
-    //     for (int j = 0; j < dimensoes_var; j++)
-    //     {
-    //         printf("%.3f ", populacao[i].x[j]);
-    //     }
-    //     printf("\n");
-    // }
-    //         for(int i=0;i<tam_pop;i++){
-    //             for(int j=0;j<T;j++){
-    //                 printf("%d ", populacao[i].vizinhanca[j]);
-    //             }
-    //             printf("\n");
-    //         }
+    for (int i = 0; i < tam_pop; i++)
+    {
+        for (int j = 0; j < dimensoes_obj; j++)
+            printf("%.3f ", populacao[i].fx[j]);
+        printf(" -- ");
+        for (int j = 0; j < dimensoes_var; j++)
+        {
+            printf("%.3f ", populacao[i].x[j]);
+        }
+        printf("\n");
+    }
+            // for(int i=0;i<tam_pop;i++){
+            //     for(int j=0;j<T;j++){
+            //         printf("%d ", populacao[i].vizinhanca[j]);
+            //     }
+            //     printf("\n");
+            // }
 
     free(populacao);
 }
